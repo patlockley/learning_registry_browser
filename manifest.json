@@ -1,0 +1,24 @@
+{
+   "background":{
+     "scripts":["background.js"]
+	},
+   "content_scripts": [ {
+      "js": ["content_script.js" ],
+      "matches": [ "http://*/*","https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "default_locale": "en_US",
+   "icons": {
+      "128": "icon.png"
+   },
+   "name": "Learning registry discover",
+   "page_action": {
+      "default_icon": "icon.png",
+      "default_title": "Checks to see if current page is in the Learning Registry",
+      "default_popup": "popup.html"
+   },
+   "permissions": [ "tabs", "http://*/*", "https://*/*"  ],
+   "version": "0.91",
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "manifest_version":2
+}
